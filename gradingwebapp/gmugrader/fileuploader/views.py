@@ -811,5 +811,7 @@ def register(request):
 
 #user = User.objects.create_user(username=request.POST['login'], password=request.POST['password'])
 
-
+@login_required
+def viewEditor(request):
+    return render(request, 'fileuploader/editor.html')
 
