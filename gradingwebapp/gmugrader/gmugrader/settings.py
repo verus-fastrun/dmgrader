@@ -112,14 +112,21 @@ WSGI_APPLICATION = 'gmugrader.wsgi.application'
 # }
 
 
-# settings.py
-DATABASES = {
+# settings.py #this is the actual DATABASES that was in the code prior. It has been commented out when testing the web app, but can be commented back in.
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'postgres',
+#        'USER': 'postgres',
+#        'HOST': 'db', # set in docker-compose.yml
+#        'PORT': 5432 # default postgres port
+#    }
+#}
+
+DATABASES = { # This is used to allow the localserver to run the web app, The DATABASES above (starting at line 116) is the actual.
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'HOST': 'db', # set in docker-compose.yml
-        'PORT': 5432 # default postgres port
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
