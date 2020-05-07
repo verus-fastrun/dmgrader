@@ -1,0 +1,32 @@
+Instructions to run the Miner web app on the local server using Django and Go to the Code Editor Link:
+1. In a command prompt/terminal, go to the directory dmgrader-3\gradingwebapp\gmugrader
+2. Make sure to migrate before trying to intially run properly. Check the requirements.txt file to make sure you have installed each package needed.
+2. Run the local server using manage.py. The command is python manage.py runsever
+3. Using a browser, go to http://127.0.0.1:8000/
+4. You should see the login page. 
+5. Create a new User for intial run. Later runs on the same device allow user to login as the user account they setup.
+6. Once created, you can login.
+7. Certain parts of the site are not working because the databases were not found. 
+	However, to go to the Code Editor, these pages do not need to be accessed.
+8. Click the Code Editor link on the menu
+9. There is a link on this page. Clicking it will go to the Code Editor running on AWS. (Hovering over the link will show http://3.136.87.48:5000/)
+
+Changes to dmgrader-3:
+	In Templates folder:
+		In fileuploader/templates, the base.html and register.htmlwere moved from fileuploader/templates/fileuploader and login.html from fileuploader/templates/fileuploader/registration to fileuploader/templates. 
+		The original htmls in fileuploader/templates named the same names are present as savedbase.html, savedregister.html, and savedlogin.html.
+		The files from fileuploader/templates/fileuploader were moved because they would not redirect to the HTML files during local Django runs.
+		
+		Added editor.html in fileuploader/templates/fileuploader. This contains a link to the code editor running on AWS.
+		Added the code editor page as an option in base.html's menu options. Code Editor will appear as an option before logout.
+		
+	In settings.py:
+		The databases was to postgres to sqlite3 because we received errors regarding the databases not being found.
+		sqlite3 was used to allow for running the dmgrader-3 on Django test servers, but the original postgres databases has been saved (commented out above the sqlite3 databases code).
+		To use with the postgres database, uncomment the postgres databases and comment out the sqlite3.
+	
+	In views.py:
+		Added viewEditor. This will send the user to editor.html when they click the 'Code Editor' menu option. 
+	
+	In urls.py:
+		Added a path to the code editor link's page to the app's urls.
