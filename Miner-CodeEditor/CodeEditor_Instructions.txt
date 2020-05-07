@@ -1,0 +1,7 @@
+This code is for the online code editor.
+This editor can be found on the AWS server (http://3.136.87.48:5000/)
+To test locally, nodejs needs to be installed.
+The command npm install express must be performed after install nodejs in the Miner-Master directory.
+
+To run the code locally, go into the Miner-Master directory and use the command node app to begin the server
+Go to http://localhost:5000/ to view and test.

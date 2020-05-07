@@ -1,0 +1,27 @@
+{
+  "name": "miner",
+  "version": "1.0.0",
+  "description": "Miner sandbox",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vaishanavi-Kundala/Miner.git"
+  },
+  "keywords": [
+    "sandbox"
+  ],
+  "author": "Vaishanavi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vaishanavi-Kundala/Miner/issues"
+  },
+  "homepage": "https://github.com/Vaishanavi-Kundala/Miner#readme"
+}
