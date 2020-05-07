@@ -1,7 +1,7 @@
-Instructions to run the Miner web app on the local server using Django and Go to the Code Editor Link:
+Instructions to run the Miner web app on the development server using Django and Go to the Code Editor Link:
 1. In a command prompt/terminal, go to the directory dmgrader-3\gradingwebapp\gmugrader
 2. Make sure to migrate before trying to intially run properly. Check the requirements.txt file to make sure you have installed each package needed.
-2. Run the local server using manage.py. The command is python manage.py runsever
+2. Run the development server using manage.py. The command is python manage.py runsever
 3. Using a browser, go to http://127.0.0.1:8000/
 4. You should see the login page. 
 5. Create a new User for intial run. Later runs on the same device allow user to login as the user account they setup.
