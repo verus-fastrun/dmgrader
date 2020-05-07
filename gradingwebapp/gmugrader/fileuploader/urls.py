@@ -22,6 +22,7 @@ urlpatterns=[
     url(r'^computescores.html$',views.computescores, name='computescores'),
     url(r'^register$',views.register, name='register'),
     url(r'^register.html$',views.register, name='register'),
+    path('editor/', views.viewEditor, name='editor'),	
     
     url(r'^courses.html$',views.indexCourse, name='courses'),
     url(r'^courses$',views.indexCourse, name='courses'),
